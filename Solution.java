@@ -1,246 +1,251 @@
-package Practice.codingTest;
-
 import java.util.Arrays;
-import java.util.Scanner;
+//짝수홀수 개수
+class Solution{
+    public static void main(String[] args) {
+        int[] num_list={1, 2, 3, 4, 5};
+        int[] answer = {};
+        int[] odd = {};
+        int[] even = {};
+        System.out.println("num_list = " + num_list.length);
+        for(int i=0; i< num_list.length;i++){ //
+            if(num_list[i]%2==1){ //홀수면
+                odd+=num_list[i];// odd에 배열에 넣어라
+                answer
+                System.out.println("abc");
+                }else{
+//            System.out.println(odd[1]);
+        }}
+        }
 
-
-class Solution {
-    class Solution {
-        public int solution(int n) {
-            int answer = 0;
-            int i=0;
-            int j=0;
-            if(n%2==1 && i%2==1){//n이 홀수면?
-                for(i=0;i<n; i++){ // i가 0번째부터 n번째 전까지??  반복문 증가하며 돌아라
-                    if(i%2==1){ // i가 홀수면? answer에 n을 넣어라
-                        answer+=n;
-                    }else{continue;}
-                }
-            }else{//짝수면?
-                for(j=0;j<n; j++){
-                    if(j%2==0){
-                        answer += n*n;
-                    }else{continue;}}
-            }
-            return answer;
-        }}}
+}
 
 
 
-
-//13. 정수를 합쳐서 a+b b+a 중 더 큰 숫자 return 하기 ***** 미완성
+//특정한 문자를 대문자로 바꾸기
+//class Solution{
+//    public static void main(String[] args) {
+//        String my_string= "programmers";
+//        String alp = "p";
 //
-//class Solution {
-//    public int solution(int a, int b) {
-//        int answer = 0;
-//        String strA;
-//        String strB;
-//        strA = String.valueOf(a);
-//        strB = String.valueOf(b);
-//        if(strA+strB > strB+strA){
-//
-//        }
-//
-//        return answer;
-//    }
-//}
-
-
-
-//12. 문자열 곱하기
-//class Solution {
-//    public String solution(String my_string, int k) {
 //        String answer = "";
 //
-////         1. for문 방법
-//        // for(int i=0; i<k; i++){
-//        // answer += my_string;
-//        // }
-//// 2. repeat 방법
-//        answer = my_string.repeat(k);
-//        return answer;
-//    }
-//}
-
-
-
-//11. 문자열 여러개 합치기
-//class Solution {
-//    public String solution(String[] arr) {
-//        return String.join("", arr);
+//        String[] str1= my_string.split("");
 //
-//    }
-//}
-
-
-
-//10. 문자열 섞기 ******미완성
-//public static void main(String[] args) {
-//   class Solution()
-//}
 //
+//            for(int i=0; i<str1.length;i++){
+//                if(str1[i].equals(alp)){
+//                answer += str1[i].toUpperCase();
+//                }else{
+//                    answer += str1[i];
+//                }
+//                }System.out.println("str1 = " + answer);
+//        }
+//    }
+
+
+
+
+
+
+
+//길이에 따른 연산
+
 //class Solution {
-//        public String solution(String str1, String str2){
-//            String answer = "";
-//            for(int i=0; i<str1.length(); i++){
-//                answer += String.valueOf(str1.charAt(i))+String.valueOf(str2.charAt(i));
+//    public static void main(String[] args) {
+//        int[] num_list={3, 4, 5, 2, 5, 4, 6, 7, 3, 7, 2, 2, 1};
+//        방법1. 내가 푼 것
+//        System.out.println("num_list = " + num_list.length);
+//        if(num_list.length>=11){
+//            answer=0;
+//            for(int i=0; i< num_list.length; i++){
+//                answer += num_list[i];
+//
+//            }System.out.println("answer = " + answer);
+//       }else {
+//            for (int i = 0; i < num_list.length; i++) {
+//                answer *= num_list[i];
+//
 //            }
-//            return answer;
+//            System.out.println("num_list = " + num_list.length);
+//            System.out.println("answer = " + answer);
+//        }
 //        }
 //    }
 
-
-//10. 문자열 지정한 자릿수부터 덮어씌우기 ******미완성
-
-
-
-//9. 홀수면 n is odd, 짝수면 n is even 출력하기
-//public class Solution {
-//    public static void main(String[] args) {
-//        Scanner sc = new Scanner(System.in);
-//        int n = sc.nextInt();
-//방법1. if문사용
-//        if(n%2==0){
-//            System.out.printf("%d is even", n);
-//        }else{
-//            System.out.printf("%d is odd", n);
-//        }
-//방법2. 삼항연산자
-//        System.out.println((n%2==0)? n+" is even" : n+" is odd" );
-//    }
+//        //        방법2. 삼항연산 해보자
+//        int answer =(num_list.length>=11)? 0 : 1;
+//        for(int i=0; i<num_list.length;i++){
+//            if(num_list.length>=11){
+//                answer+=num_list[i];
+//            }else{
+//                answer*=num_list[i];
+//            }
+//        }System.out.println("answer = " + answer);}
 //}
 
 
-//8.문자열 하나씩 세로로 나열하기..
-//public class Solution {
+
+
+
+
+//원소들의 곱과 합;
+//class Solution{
 //    public static void main(String[] args) {
-//        Scanner sc = new Scanner(System.in);
-//        String str = sc.next();
-////방법1. charAt(i)와 for 반복으로 풀기
-////        for(int i=0; i<str.length();i++){
-////            System.out.println(str.charAt(i));
-////        }
+//        int[] num_list={3, 4, 5, 2, 1};
+//        int answer = 0;
+//        int sum =0;
+//        int sumSquare =0;
+//        int multiply = 0;
 //
-////        방법2. split으로 풀기..... 어떻게 하지?
 //
-//        for (int i=0; i<str.length();i++){
-//            String[] result = str.split("",str.length());
-//            System.out.println(Arrays.toString(result[i].toCharArray()));
-//    }
-//    }
-//}
-
-//못풀엇다 ㅠㅠㅠ
-//문제7. 문자열 붙여서 출력하기
-//public class Solution {
-//    public static void main(String[] args) {
-//        Scanner sc = new Scanner(System.in);
-//        String str = sc.next();
-////        String result="";
-////        for(int i = 0; i < str.length(); i++) {
-////            if(str.charAt(i) != ' ')
-////                result += str.charAt(i);
-////        }System.out.println(result);
-//        str = str.replaceAll("\\p{Z}", "");
-//        System.out.print(str);
-//    }
-//}
-
-
-
-//문제6. 덧셈식 출력하기
-//public class Solution {
-//    public static void main(String[] args) {
-//        Scanner sc = new Scanner(System.in);
-//        String str = sc.next();
-//        int n = sc.nextInt();
-//방법1. for문 사용해서 문자열 그대로 출력하기
-//        for (int i=0;i<n;i++){
-//             System.out.print(str);
+//        for(int i=0; i<num_list.length; i++){
+//            sum = num_list[i];
 //        }
+//        System.out.println("multiply = " + multiply);
+//        System.out.println("sumSquare = " + sum*sum); // 모든 원소의 합의 제곱!!
+//
+//        for(int j=0; j<num_list.length;j++ ){
+//        multiply *= num_list[j];
+//
+//    }
+//        System.out.println("multiply = " + multiply);
+//        System.out.println((sum*sum > multiply) ? 1 : 0);
+//    }
+//}
 
-//방법2. for문 사용 안하고 그냥 repeat n번 사용하기      System.out.print(str.repeat(n));//
-////  
+
+
+///홀짝에 따라 다른 값 반환하기 (복습필요!!!!!!!)?????? 1개통과??
+//public class Solution{
+//    public static void main(String[] args) {
+//        int n=7;
+//        int answer = 0;
+//        if(n%2==1 && n>0){//n이 홀수 && 양수 &&
+//            for(int i=1;i<n; i+=2){ // i=n, n부터 시작해서 i++ 전까지??  반복문 증가하며 돌아라
+//                // n가 홀수고 양수이면?
+//                answer += i; // odd에 n을 넣어라
+//                System.out.println("i = " + i);
+//            }
+//        else if(n%2==0 && n>0){//짝수면?
+//            for(int i=1;i<=n; i++){
+//                int even += n*n;
+//                System.out.println("even = " + even);
+//                }
+//        }
+//        }
+//    }
+
+
+
+
+
+
+
+//조건에 맞게 수열 변환하기1---------실패
+//public class Solution {
+//    public static void main(String[] args) {
+//        int[] arr = {1, 2, 3, 100, 99, 98};
+//        int[] answer = {};
+//        for(int i=0; i<arr.length; i++){
+//            if(arr[i]>=50 && arr[i]%2==0){ // i번째 배열값이 50이상이면서 짝수이면?
+//                answer[i] += arr[i]/2; // 2로 나누고 answer의 i값 배열에 넣기
+//                System.out.println("answer[i] = " + answer[i]);
+//            }else if(arr[i]<50 && arr[i]%2==1){ // i번째 배열값이 50미만이면서 홀수이면?
+//                answer[i] += arr[i]*2;//2를 곱하고 answer의 i값 배열에 넣기
+//                System.out.println("answer[i] = " + answer[i]);
+//            }else{
+//                answer[i] = arr[i];
+//                System.out.println("answer[i] = " + answer[i]);
+//            }
+//        }
+//    }
+//}
+
+
+
+//홀수 vs 짝수 - 완성
+//public class Solution{
+//    public static void main(String[] args) {
+//        int[] num_list = {4, 2, 6, 1, 7, 6};
+//        int answer1 = 0;
+//        int answer2 = 0;
+//        for(int i=0; i<num_list.length; i++){
+//            if(i%2==1){ //홀수
+//                answer1 += num_list[i]; //answer1에 홀수 배열 넣기
+//            }else{ //짝수
+//                answer2 +=num_list[i];
+//            }
+//        }System.out.println((answer1>answer2) ? answer1 : answer2);
 //    }}
 
-//문제5. 특수문자 출력하기
-//public class Solution {
-//        public static void main(String[] args) {
-//            System.out.println("!@#$%^&*(\\\'\"<>?:;");
-//        }
-//    }
 
-//문제4-1. 대문자는 소문자로, 소문자는 대문자로
-//public class Solution0 {
-//        public static void main(String[] args) {
-//            Scanner sc = new Scanner(System.in);
-//            String a= sc.next();
-//            String result="";
-//                for(int i=0;i<a.length();i++){
-//                    char c= a.charAt(i);
-//                    if(Character.isUpperCase(c)){
-//                        result += Character.toLowerCase(c);
-//                    }else{
-//                        result += Character.toUpperCase(c);
-//                    }
-//                }System.out.print(result);
+
+
+//        포기...
+//            int[] arr = new int[]{1,2,3,100,99,98};
+//            int[] answer = {};
+//        for(int i=0; i<arr.length; i++) {
+//            if (arr[i] >= 50 && arr[i] % 2 == 0) {
+//                answer[i] += arr[i] /2;
+//                System.out.println("answer1 = " + answer);
+//                System.out.println("i = " + i);
+//            } else if (arr[i] < 50 && arr[i] * 2 == 1) {
+//                answer[i] += arr[i] *2;
+//                System.out.println("answer2 = " + answer);
+//                System.out.println("i = " + i);
+//            } else {
+//                answer[i] += 0;
+//                System.out.println("answer3 = " + answer);
+//                System.out.println("i = " + i);
+//            }
 //        }
+//        System.out.println("answer = " + answer);
+//    }
 //}
 
 
-//문제4-2
-//public class Solution {
+
+
+//==========================================================================
+//public class Solution{
 //    public static void main(String[] args) {
 //        Scanner sc = new Scanner(System.in);
-//        String a = sc.next();
-//        String answer = "";
+//        String str1 = sc.next();
+//        String str2 = sc.next();
 //
-//        for(int i=0;i<a.length();i++){
-//            char c =a.charAt(i);
-//            if(Character.isUpperCase(c)){
-//                answer += Character.toLowerCase(c);
-//            }else{
-//                answer += Character.toUpperCase(c);
-//            }
-//        }System.out.print(answer);
-//        }}
-
-
-
-//문제3
-//public class Solution {
-//    public static void main(String[] args) {
-//            Scanner sc = new Scanner(System.in);
-//            String str = sc.next();
-//            int n = sc.nextInt();
-//        //for문으로 풀기
-//            for(int i=0; i<n; i++){
-//            System.out.print(str);}
-//        //while문으로 풀기
-//        int i = 0;
-//        while(i < n){
-//            i++;
-//            System.out.println(str);}
+//        Aclass a = new Aclass(); // Aclass에대한 인스턴스 생성
+//        System.out.println(a.solution(str1,str2));
 //    }
 //}
+//class Aclass {
+//    public String solution(String str1, String str2){
+//        String answer = "";
+//        for(int i=0; i<str1.length(); i++){
+//            answer += String.valueOf(str1.charAt(i))+String.valueOf(str2.charAt(i));
+//        }
+//        return answer;
+//    }
+//}
+//==========================================================================
+//class Solution {
+//    public String solution(String str1, String str2){
+//        String answer = "";
+//        for(int i=0; i<str1.length(); i++){
+//            answer += String.valueOf(str1.charAt(i))+String.valueOf(str2.charAt(i));
+//        }
+//        return answer;
+//    }
+//}
+//==========================================================================
 
-
-//문제2
 //public class Solution {
 //    public static void main(String[] args) {
 //        Scanner sc = new Scanner(System.in);
 //        int a = sc.nextInt();
 //        int b = sc.nextInt();
-//        System.out.printf("a = %d"+"\n"+"b = %d",a, b);
-//}}
-
-//문제1
-//public class Solution {
-//    public static void main(String[] args) {
-//        Scanner sc = new Scanner(System.in);
-//        String str= sc.next();
-//        if(str==str){
-//            System.out.println(str);
-//        }
+//        int c = a+b;
+//        System.out.printf("%d+%d=%d",a,b,c);
+//
 //    }
-//}
+//
+//    }
